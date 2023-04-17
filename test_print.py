@@ -6,7 +6,7 @@ Created on Mon Apr 17 14:57:33 2023
 """
 
 import requests
-import datetime
+from datetime import datetime
 
 def send_telegram_message(group_id , send_url , text_type , error_message = ""):
     
