@@ -21,5 +21,8 @@ def send_telegram_message(group_id , send_url , text_type , error_message = ""):
     send_url = send_url
 
     requests.post(send_url , json = {'chat_id' : group_id, 'text': text})
-    
-send_telegram_message(-1001763318295 , "https://api.telegram.org/bot5564798304:AAHyN_uuboKonRVhVvVSB9sBe9gfhiViJXk/sendMessage" , "failed" , error_message = "Testing")
+try:    
+    send_telegram_message(-1001763318295 , "https://api.telegram.org/bot5564798304:AAHyN_uuboKonRVhVvVSB9sBe9gfhiViJXk/sendMessage" , "failed" , error_message = "Testing")
+    print("Yes")
+except Exception as e:
+    print(e)
